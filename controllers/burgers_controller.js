@@ -4,24 +4,24 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 //home page route
-router.get("/", function(req, res){
-    buger.all(function(data){
-        res.render("index", {burgers: data});
+router.get("/", function (req, res) {
+    burger.all(function (data) {
+        res.render("index", { burgers: data });
     });
 });
 
 // route for creating burgers
-router.get("/api/burgers", function(req, res){
-    buger.create("burger_name", req.body.name, function(result){
+router.post("/api/burgers", function (req, res) {
+    burger.create("burger_name", req.body.name, function (result) {
         res.redirect('back');
     });
 });
 
 // route for updating burgers while nesting a variable instead of concatinating 
-router.get("/api/burgers:id", function(req, res){
-    buger.update("devoured", true, "id = ${req.body.name}", function(result){
+router.put("/api/burgers/:id", function (req, res) {
+    burger.update("devoured", true, `id=${req.params.id}`, function (result) {
         res.redirect('back');
     });
 });
 
-module.exports = router
+module.exports = router;
