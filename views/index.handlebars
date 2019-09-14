@@ -1,6 +1,6 @@
 <div class="container">
     <div class="jumbotron">
-        <h1 class="display-3">Eat da Burger</h1>
+        <h1 class="display-3"><img src="./assets/img/burger.jpg" alt="burger">Eat da Burger</h1>
     </div>
     <div class="row">
         <div class="col">
@@ -9,7 +9,7 @@
                 {{#unless devoured}}
                 <li data-id="{{id}}">
                     {{burger_name}}
-                    <form action="api/burgers/{{id}}?_method=PUT" method="POST" class="devour-it">
+                    <form action="api/burgers/{{id}}" method="POST" class="devour-it">
                         <button type="submit">Eat the Burger!</button>
                     </form>
                 </li>
@@ -45,3 +45,7 @@
         </div>
     </div>
 </div>
+<footer>
+    <p>Code by Logan Ayers</p>
+    <p>Find me at <a href="https://github.com/LAyers45">Github.com</a>.</p>
+</footer>

@@ -1,0 +1,20 @@
+body {
+    background-color: lightblue;
+  }
+.jumbotron{
+    border-style: double;
+    border-color: green;
+    border-width: 5px;
+    background-color: tan;
+    height:250px;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+  }
+
+img{
+    height:150px;
+  }

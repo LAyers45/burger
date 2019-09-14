@@ -18,7 +18,7 @@ router.post("/api/burgers", function (req, res) {
 });
 
 // route for updating burgers while nesting a variable instead of concatinating 
-router.put("/api/burgers/:id", function (req, res) {
+router.post("/api/burgers/:id", function (req, res) {
     burger.update("devoured", true, `id=${req.params.id}`, function (result) {
         res.redirect('back');
     });
